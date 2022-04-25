@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+
+{%block title%}Home{%endblock%}
+
+{%block content%}
+
+{%for post in posts%}
+<h2><a href="post/{{post[0]}}">{{post[3]}}</a><br></h2>
+<p>{{post[4] | truncate(25)}} <br></p>
+{{post[2]}} - {{post[1]}} <br>
+<hr>
+{%endfor%}
+
+{%endblock%}
